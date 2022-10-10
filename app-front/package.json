@@ -1,0 +1,12 @@
+{
+  "name": "app-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Back pronto para começar\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

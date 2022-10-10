@@ -1,0 +1,12 @@
+{
+  "name": "app-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "echo \"Back pronto para começar\""
+  },
+  "keywords": [],
+  "author": "Danilo Oliveira de Mello Amorim",
+  "license": "ISC"
+}

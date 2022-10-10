@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  app-front:
+    container_name: app-front
+    build: app-front/.
+    depends_on:
+      - app-back
+    ports:
+      - "7772:7772"
+    volumes:
+      - ./app-front:/usr/src/app-front/
+      - /usr/src/app-front/node_modules
+  
+  app-back:
+    container_name: app-back
+    build: app-back/.
+    depends_on:
+      - postgres
+    ports:
+      - "7771:7771"
+    volumes:
+      - ./app-back:/usr/src/app-back/
+      - /usr/src/app-back/node_modules
+
+  postgres:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=cotacaoDB
+    ports:
+      - "5432:5432"
